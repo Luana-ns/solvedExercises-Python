@@ -1,2 +1,2 @@
-# solvedExercises
-Exercícios resolvidos com Python 
+# Solved Exercises with Python 
+### Exercícios resolvidos com Python 
