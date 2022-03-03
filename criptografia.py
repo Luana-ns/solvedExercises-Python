@@ -4,6 +4,16 @@
 # Ydprv dsuhqghu fulswrjudild?
 # Ydl sud flpd ghohv Jdor!
 
+mensagem = input('Digite a mensagem: ')
+cifra = int(input('Digite o valor da cifra: '))
+
+for i in range(len(mensagem)):
+    if (ord(mensagem[i]) < 65 or ord(mensagem[i]) > 122):
+        print(mensagem[i])
+    else:
+        print(chr(ord(mensagem[i]) - cifra), end='')
+print('')
+
 
 # Implementar a Cifra de Vinegère
 # dado uma palavra e uma chave, rotacione as letras e retorne
