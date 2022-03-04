@@ -9,12 +9,12 @@
 
 mensagem = input('Digite a mensagem: ')
 chave = int(input('Digite o valor da cifra: '))
-
+resultado = ''
 for i in range(len(mensagem)):
     if (ord(mensagem[i]) < 65 or ord(mensagem[i]) > 122):
-        print(mensagem[i])
+        resultado += (mensagem[i])
     else:
-        print(chr(ord(mensagem[i]) - chave), end='')
+        resultado += chr(ord(mensagem[i]) - chave)
 print('')
 
 
