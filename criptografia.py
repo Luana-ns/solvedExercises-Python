@@ -5,14 +5,16 @@
 # Ydl sud flpd ghohv Jdor!
 
 mensagem = input('Digite a mensagem: ')
-cifra = int(input('Digite o valor da cifra: '))
-
+chave = int(input('Digite o valor da cifra: '))
+resultado = ''
 for i in range(len(mensagem)):
     if (ord(mensagem[i]) < 65 or ord(mensagem[i]) > 122):
-        print(mensagem[i])
+        resultado += (mensagem[i])
     else:
-        print(chr(ord(mensagem[i]) - cifra), end='')
-print('')
+        resultado += chr(ord(mensagem[i]) - chave)
+print(resultado)
+
+
 
 
 # Implementar a Cifra de Vinegère
@@ -20,3 +22,16 @@ print('')
 # Responder o que significa os textos(rot 13)
 # Ibpr + Pbzhavqnqr = CbqPbqne
 # Yrzoerz-fr qn ncerfragnpnb qr svany qr pvpyb frznan dhr irz!
+
+alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
+cifra = int(input('Digite o valor da cifra: '))  # rotação
+mensagem = input("Digite a mensagem: ").upper()
+resultado = ''
+for i in mensagem:
+    pos = alfabeto.find(i)
+    new_pos = (pos - cifra) % 26
+    if i in alfabeto:
+        resultado += alfabeto[new_pos]
+    else:
+        resultado += i
+print('Resultado: ' + resultado)
