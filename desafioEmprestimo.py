@@ -8,6 +8,6 @@ anos = input('Digite em quantos anos você quer dividir as parcelas: ')
 mensalidade = float(valor)/(float(anos)* 12)
 
 if mensalidade <= (float(salario) * 30/100):
-    print (f'Para pagar uma casa de R${round(float(valor), 2)} em {anos} anos a prestação será de R${round(float(mensalidade), 2)}. Empréstimo aprovado!')
+    print (f'Para pagar uma casa de R${float(valor):.2f} em {anos} anos a prestação será de R${float(mensalidade):.2f}. Empréstimo APROVADO!')
 else:
-    print(f'Para pagar uma casa de R${round(float(valor), 2)} em {anos} anos a prestação será de R${round(float(mensalidade), 2)}. Empréstimo NEGADO!')
+    print(f'Para pagar uma casa de R${float(valor):.2f} em {anos} anos a prestação será de R${float(mensalidade):.2f}. Empréstimo NEGADO!')
